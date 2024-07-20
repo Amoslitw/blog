@@ -26,6 +26,7 @@
         .menu-item {
             cursor: pointer;
             color: #0066cc;
+            margin-bottom: 10px;
         }
         .menu-item:hover {
             text-decoration: underline;
@@ -35,8 +36,8 @@
             overflow: hidden;
             transition: max-height 0.3s ease-out;
             background-color: #e9e9e9;
-            margin-top: 10px;
             border-radius: 5px;
+            margin-bottom: 10px;
         }
         .content-inner {
             padding: 10px;
@@ -47,11 +48,7 @@
     <div class="container">
         <h1>Amos S. Li</h1>
         <p>A personal page of Amos.</p>
-        <ul>
-            <li class="menu-item" onclick="toggleContent('about')">About</li>
-            <li>Articles</li>
-            <li>Contact</li>
-        </ul>
+        <div class="menu-item" onclick="toggleContent('about')">About</div>
         <div id="about" class="content">
             <div class="content-inner">
                 <p>Here you can write about yourself. For example:</p>
@@ -59,6 +56,8 @@
                 With [X] years of experience in [your field], Amos is dedicated to [your goals or mission].</p>
             </div>
         </div>
+        <div class="menu-item">Articles</div>
+        <div class="menu-item">Contact</div>
     </div>
     <script>
         function toggleContent(id) {
