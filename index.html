@@ -76,6 +76,12 @@
     </div>
     <script>
         function toggleContent(id) {
+            var contents = document.getElementsByClassName('content');
+            for (var i = 0; i < contents.length; i++) {
+                if (contents[i].id !== id) {
+                    contents[i].style.maxHeight = null;
+                }
+            }
             var content = document.getElementById(id);
             if (content.style.maxHeight) {
                 content.style.maxHeight = null;
